@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="website.css">
+    <title></title>
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+  <source src="SIT.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <form action="attendeesList.php" class="container" method="get">
+    <h1><center>Ticket.No</center></h1>
+    <center><input id="myBtn" type="text" placeholder="Ticket.No" name="email" required></center>
+  <br>
+  <br>
+  <center><button id="myBtn" onclick="myFunction()">ENTER</button></center>
+</div>
+</form>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+  </body>
+</html>
